@@ -8,7 +8,7 @@ const userRouter = require("./routers/user");
 
 const app = express();
 
-const port = process.env.PORT;
+const port = 3000;
 
 app.use(express.json());
 app.use(postRouter);
@@ -24,6 +24,6 @@ app.get("/", (req, res) => {
   res.send({ msg: "Hey congratulations, we are connected" });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log("Server is up on port " + port);
 });
